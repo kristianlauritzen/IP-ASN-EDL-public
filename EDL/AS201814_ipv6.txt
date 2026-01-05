@@ -1,0 +1,14 @@
+# IPv6 Prefixes for AS201814
+# Name: MEVSPACE, PL
+# Country: BG
+# Registry: ripencc
+# Generated: 2026-01-05 10:27:36
+# Source IP: 194.180.49.219
+# Data source: RIPE RIS
+# Total: 4
+#==================================================
+
+2a03:cfc0:8000::/33
+2a03:cfc0::/32
+2a09:d580::/29
+2a12:a800:2::/48
