@@ -18,6 +18,7 @@ Example:
 """
 
 import sys
+import os
 import json
 import socket
 import urllib.request
@@ -213,9 +214,13 @@ def main():
     print(f"Total:         {total}")
     print(f"Data source:   {source}")
 
-    # Write to separate files
-    ipv4_file = f"AS{asn}_ipv4.txt"
-    ipv6_file = f"AS{asn}_ipv6.txt"
+    # Create EDL output folder
+    output_dir = "EDL"
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Write to separate files in EDL folder
+    ipv4_file = os.path.join(output_dir, f"AS{asn}_ipv4.txt")
+    ipv6_file = os.path.join(output_dir, f"AS{asn}_ipv6.txt")
     
     def write_header(f, ip_version, count):
         f.write(f"# {ip_version} Prefixes for AS{asn}\n")
